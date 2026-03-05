@@ -229,18 +229,102 @@
                   cuenta del huésped para un check-out sin estrés.</li>
               </ul>
             </div>
-            <div class="feature-visual glass-panel fade-in-left">
-              <div class="calendar-grid-mockup">
-                <div class="col-head">Lun</div>
-                <div class="col-head">Mar</div>
-                <div class="col-head">Mié</div>
-                <div class="room-row">Hab 201</div>
-                <div class="booking occupied" style="grid-column: span 2;">Reserva #891</div>
-                <div class="room-row">Hab 202</div>
-                <div class="booking free">Disponible</div>
-                <div class="booking occupied">Reserva #892</div>
+            <div class="feature-visual glass-panel cal-panel fade-in-left">
+              <!-- Header: Mes + navegación -->
+              <div class="cal-header">
+                <span class="cal-month"><i class="fas fa-calendar-alt"></i> Marzo 2026</span>
+                <div class="cal-nav">
+                  <button class="cal-nav-btn"><i class="fas fa-chevron-left"></i></button>
+                  <button class="cal-nav-btn"><i class="fas fa-chevron-right"></i></button>
+                </div>
+              </div>
+
+              <!-- Grid: días + habitaciones -->
+              <div class="cal-grid-wrap">
+                <!-- Columna de habitaciones -->
+                <div class="cal-rooms">
+                  <div class="cal-room-head"></div>
+                  <div class="cal-room-label"><i class="fas fa-door-open"></i> Hab 101</div>
+                  <div class="cal-room-label"><i class="fas fa-door-open"></i> Hab 102</div>
+                  <div class="cal-room-label"><i class="fas fa-door-open"></i> Hab 201</div>
+                  <div class="cal-room-label"><i class="fas fa-door-open"></i> Hab 202</div>
+                  <div class="cal-room-label"><i class="fas fa-star"></i> Suite</div>
+                </div>
+
+                <!-- Columnas de días -->
+                <div class="cal-days-wrap">
+                  <!-- Días header -->
+                  <div class="cal-days-header">
+                    <div class="cal-day-head">Lun<span>3</span></div>
+                    <div class="cal-day-head">Mar<span>4</span></div>
+                    <div class="cal-day-head today">Mié<span>5</span></div>
+                    <div class="cal-day-head">Jue<span>6</span></div>
+                    <div class="cal-day-head">Vie<span>7</span></div>
+                  </div>
+
+                  <!-- Hab 101 -->
+                  <div class="cal-row">
+                    <div class="cal-booking booking-blue" style="grid-column: span 3;">
+                      <i class="fas fa-user"></i> García, M.
+                      <span class="booking-tag">3 noches</span>
+                    </div>
+                    <div class="cal-booking booking-free" style="grid-column: span 2;">
+                      <i class="fas fa-plus"></i> Libre
+                    </div>
+                  </div>
+
+                  <!-- Hab 102 -->
+                  <div class="cal-row">
+                    <div class="cal-booking booking-broom" style="grid-column: span 1;">
+                      <i class="fas fa-broom"></i>
+                    </div>
+                    <div class="cal-booking booking-purple" style="grid-column: span 4;">
+                      <i class="fas fa-user"></i> Rojas, F.
+                      <span class="booking-tag">Check-in hoy</span>
+                    </div>
+                  </div>
+
+                  <!-- Hab 201 -->
+                  <div class="cal-row">
+                    <div class="cal-booking booking-blue" style="grid-column: span 5;">
+                      <i class="fas fa-user"></i> Martínez, C.
+                      <span class="booking-tag">5 noches</span>
+                    </div>
+                  </div>
+
+                  <!-- Hab 202 -->
+                  <div class="cal-row">
+                    <div class="cal-booking booking-free" style="grid-column: span 2;"></div>
+                    <div class="cal-booking booking-orange" style="grid-column: span 3;">
+                      <i class="fas fa-user"></i> López, A.
+                      <span class="booking-tag">Pendiente</span>
+                    </div>
+                  </div>
+
+                  <!-- Suite -->
+                  <div class="cal-row">
+                    <div class="cal-booking booking-purple" style="grid-column: span 2;">
+                      <i class="fas fa-user"></i> Soto, R.
+                    </div>
+                    <div class="cal-booking booking-broom" style="grid-column: span 1;">
+                      <i class="fas fa-broom"></i>
+                    </div>
+                    <div class="cal-booking booking-blue" style="grid-column: span 2;">
+                      <i class="fas fa-user"></i> Díaz, K.
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Leyenda -->
+              <div class="cal-legend">
+                <span><i class="fas fa-circle" style="color:#0ea5e9"></i> Confirmada</span>
+                <span><i class="fas fa-circle" style="color:#8b5cf6"></i> Check-in</span>
+                <span><i class="fas fa-circle" style="color:#f59e0b"></i> Pendiente</span>
+                <span><i class="fas fa-circle" style="color:#94a3b8"></i> Limpieza</span>
               </div>
             </div>
+
           </div>
 
           <!-- Feature 4 & 5 Grid -->
