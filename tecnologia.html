@@ -32,7 +32,12 @@
                     <li><a href="/index.html#features">Características</a></li>
                     <li><a href="/index.html#benefits">Beneficios</a></li>
                 </ul>
-                <a href="/index.html#contact" class="btn-primary-sm">Solicitar Demo</a>
+                <div style="display: flex; align-items: center; gap: 1rem;">
+                    <a href="/index.html#contact" class="btn-primary-sm">Solicitar Demo</a>
+                    <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+                        <span></span><span></span><span></span>
+                    </button>
+                </div>
             </div>
         </nav>
 
@@ -116,6 +121,31 @@
             </div>
         </footer>
     </div>
+
+    <!-- Sidebar Overlay -->
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+    <!-- Mobile Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-logo">Open<span>Trip</span></div>
+            <button class="sidebar-close" id="sidebar-close" aria-label="Cerrar menú"><i
+                    class="fas fa-times"></i></button>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="/index.html#about"><i class="fas fa-info-circle"></i> ¿Qué es?</a>
+            <a href="/lo-que-resolvemos.html"><i class="fas fa-search"></i> Lo que resolvemos</a>
+            <a href="/tecnologia.html" class="sidebar-active"><i class="fas fa-microchip"></i> Tecnología</a>
+            <div class="sidebar-divider"></div>
+            <a href="/index.html#problems"><i class="fas fa-bolt"></i> Soluciones</a>
+            <a href="/index.html#features"><i class="fas fa-star"></i> Características</a>
+            <a href="/index.html#benefits"><i class="fas fa-gem"></i> Beneficios</a>
+        </nav>
+        <div class="sidebar-cta">
+            <a href="/index.html#contact">Solicitar Demo</a>
+        </div>
+    </aside>
+
     <script type="module" src="/src/main.js"></script>
 </body>
 
