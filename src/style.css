@@ -1372,6 +1372,7 @@ footer {
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(14, 165, 233, 0.4);
 }
+
 /* ================================================
    CALENDAR PMS MOCKUP
    ================================================ */
@@ -1380,6 +1381,7 @@ footer {
     overflow: hidden;
     border: 1px solid rgba(14, 165, 233, 0.18) !important;
 }
+
 .cal-header {
     display: flex;
     justify-content: space-between;
@@ -1388,6 +1390,7 @@ footer {
     background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
     border-bottom: 1px solid rgba(14, 165, 233, 0.15);
 }
+
 .cal-month {
     font-family: var(--font-heading);
     font-size: 1rem;
@@ -1397,102 +1400,373 @@ footer {
     align-items: center;
     gap: 0.5rem;
 }
-.cal-month i { color: var(--brand-primary); font-size: 0.95rem; }
-.cal-nav { display: flex; gap: 0.4rem; }
+
+.cal-month i {
+    color: var(--brand-primary);
+    font-size: 0.95rem;
+}
+
+.cal-nav {
+    display: flex;
+    gap: 0.4rem;
+}
+
 .cal-nav-btn {
-    width: 28px; height: 28px;
+    width: 28px;
+    height: 28px;
     border: 1px solid rgba(14, 165, 233, 0.25);
-    background: #fff; border-radius: 6px; cursor: pointer;
-    font-size: 0.75rem; color: var(--brand-accent);
-    display: flex; align-items: center; justify-content: center;
+    background: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.75rem;
+    color: var(--brand-accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     transition: var(--transition);
 }
-.cal-nav-btn:hover { background: var(--brand-primary); color: #fff; border-color: var(--brand-primary); }
-.cal-grid-wrap { display: flex; overflow-x: auto; }
+
+.cal-nav-btn:hover {
+    background: var(--brand-primary);
+    color: #fff;
+    border-color: var(--brand-primary);
+}
+
+.cal-grid-wrap {
+    display: flex;
+    overflow-x: auto;
+}
+
 .cal-rooms {
-    display: flex; flex-direction: column;
+    display: flex;
+    flex-direction: column;
     min-width: 88px;
     border-right: 1px solid rgba(14, 165, 233, 0.12);
     flex-shrink: 0;
 }
+
 .cal-room-head {
-    height: 42px; background: #f8fafc;
+    height: 42px;
+    background: #f8fafc;
     border-bottom: 1px solid rgba(14, 165, 233, 0.1);
 }
+
 .cal-room-label {
-    height: 44px; display: flex; align-items: center;
-    gap: 0.4rem; padding: 0 0.8rem;
-    font-size: 0.78rem; font-weight: 600; color: var(--brand-accent);
+    height: 44px;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0 0.8rem;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--brand-accent);
     border-bottom: 1px solid rgba(14, 165, 233, 0.08);
-    background: #fafcff; white-space: nowrap;
+    background: #fafcff;
+    white-space: nowrap;
 }
-.cal-room-label i { color: var(--brand-primary); font-size: 0.7rem; opacity: 0.8; }
-.cal-days-wrap { flex: 1; display: flex; flex-direction: column; min-width: 0; }
+
+.cal-room-label i {
+    color: var(--brand-primary);
+    font-size: 0.7rem;
+    opacity: 0.8;
+}
+
+.cal-days-wrap {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
 .cal-days-header {
-    display: grid; grid-template-columns: repeat(5, 1fr);
-    height: 42px; background: #f8fafc;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    height: 42px;
+    background: #f8fafc;
     border-bottom: 1px solid rgba(14, 165, 233, 0.12);
 }
+
 .cal-day-head {
-    display: flex; flex-direction: column;
-    align-items: center; justify-content: center;
-    font-size: 0.72rem; font-weight: 600; color: var(--text-secondary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--text-secondary);
     border-right: 1px solid rgba(14, 165, 233, 0.08);
     gap: 1px;
 }
-.cal-day-head span { font-size: 0.9rem; font-weight: 700; color: var(--brand-accent); }
-.cal-day-head.today { background: rgba(14, 165, 233, 0.08); }
-.cal-day-head.today span { color: var(--brand-primary); }
+
+.cal-day-head span {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--brand-accent);
+}
+
+.cal-day-head.today {
+    background: rgba(14, 165, 233, 0.08);
+}
+
+.cal-day-head.today span {
+    color: var(--brand-primary);
+}
+
 .cal-row {
-    display: grid; grid-template-columns: repeat(5, 1fr);
-    height: 44px; border-bottom: 1px solid rgba(14, 165, 233, 0.07);
-    gap: 3px; padding: 4px 3px; align-items: center;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    height: 44px;
+    border-bottom: 1px solid rgba(14, 165, 233, 0.07);
+    gap: 3px;
+    padding: 4px 3px;
+    align-items: center;
 }
+
 .cal-booking {
-    height: 100%; border-radius: 6px;
-    display: flex; align-items: center; gap: 5px; padding: 0 8px;
-    font-size: 0.73rem; font-weight: 600;
-    white-space: nowrap; overflow: hidden;
-    transition: var(--transition); cursor: pointer;
+    height: 100%;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 0 8px;
+    font-size: 0.73rem;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: var(--transition);
+    cursor: pointer;
 }
-.cal-booking:hover { filter: brightness(0.95); transform: scaleY(1.04); }
+
+.cal-booking:hover {
+    filter: brightness(0.95);
+    transform: scaleY(1.04);
+}
+
 .booking-blue {
     background: linear-gradient(135deg, #dbeafe, #bfdbfe);
-    border: 1px solid rgba(59, 130, 246, 0.3); color: #1d4ed8;
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    color: #1d4ed8;
 }
+
 .booking-purple {
     background: linear-gradient(135deg, #ede9fe, #ddd6fe);
-    border: 1px solid rgba(139, 92, 246, 0.3); color: #6d28d9;
+    border: 1px solid rgba(139, 92, 246, 0.3);
+    color: #6d28d9;
 }
+
 .booking-orange {
     background: linear-gradient(135deg, #fef3c7, #fde68a);
-    border: 1px solid rgba(245, 158, 11, 0.35); color: #b45309;
+    border: 1px solid rgba(245, 158, 11, 0.35);
+    color: #b45309;
 }
+
 .booking-broom {
     background: linear-gradient(135deg, #f1f5f9, #e2e8f0);
-    border: 1px dashed rgba(148, 163, 184, 0.5); color: #64748b;
+    border: 1px dashed rgba(148, 163, 184, 0.5);
+    color: #64748b;
     justify-content: center;
 }
+
 .booking-free {
     background: transparent;
     border: 1px dashed rgba(14, 165, 233, 0.2);
-    color: rgba(14, 165, 233, 0.6); font-size: 0.7rem;
+    color: rgba(14, 165, 233, 0.6);
+    font-size: 0.7rem;
     justify-content: center;
 }
-.booking-free:hover { background: rgba(14, 165, 233, 0.04); }
-.booking-tag {
-    margin-left: auto; background: rgba(255,255,255,0.65);
-    padding: 1px 6px; border-radius: 20px;
-    font-size: 0.64rem; font-weight: 700; flex-shrink: 0;
+
+.booking-free:hover {
+    background: rgba(14, 165, 233, 0.04);
 }
+
+.booking-tag {
+    margin-left: auto;
+    background: rgba(255, 255, 255, 0.65);
+    padding: 1px 6px;
+    border-radius: 20px;
+    font-size: 0.64rem;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
 .cal-legend {
-    display: flex; gap: 1.2rem;
+    display: flex;
+    gap: 1.2rem;
     padding: 0.75rem 1.4rem;
-    background: #f8fafc; border-top: 1px solid rgba(14, 165, 233, 0.1);
+    background: #f8fafc;
+    border-top: 1px solid rgba(14, 165, 233, 0.1);
     flex-wrap: wrap;
 }
+
 .cal-legend span {
-    display: flex; align-items: center; gap: 0.35rem;
-    font-size: 0.72rem; font-weight: 600; color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--text-secondary);
 }
-.cal-legend i { font-size: 0.55rem; }
+
+.cal-legend i {
+    font-size: 0.55rem;
+}
+
+/* ================================================
+   BOOKING DEMO ANIMATION
+   ================================================ */
+
+/* Pulse on the free cell before the booking appears */
+@keyframes cellPulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(14, 165, 233, 0.5);
+    }
+
+    60% {
+        box-shadow: 0 0 0 6px rgba(14, 165, 233, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(14, 165, 233, 0);
+    }
+}
+
+/* Pop-in when the booking cell transforms */
+@keyframes bookingPop {
+    0% {
+        opacity: 0;
+        transform: scaleX(0.4) scaleY(0.7);
+    }
+
+    60% {
+        transform: scaleX(1.04) scaleY(1.04);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* New booking notification badge above calendar */
+@keyframes slideDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-12px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+}
+
+.booking-demo-pulse {
+    animation: cellPulse 0.7s ease-out infinite;
+    border-color: var(--brand-primary) !important;
+    background: rgba(14, 165, 233, 0.06) !important;
+}
+
+.booking-new-anim {
+    animation: bookingPop 0.55s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    transform-origin: left center;
+}
+
+/* Notification toast that appears over the calendar */
+.cal-toast {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    background: linear-gradient(135deg, #0ea5e9, #0284c7);
+    color: #fff;
+    font-family: var(--font-heading);
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.45rem 0.9rem;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: 0 4px 14px rgba(14, 165, 233, 0.4);
+    animation: slideDown 0.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    z-index: 10;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+.cal-toast.hiding {
+    animation: fadeOut 0.4s ease forwards;
+}
+
+.cal-toast i {
+    font-size: 0.7rem;
+}
+
+/* The calendar panel needs position relative for the toast */
+.cal-panel {
+    position: relative !important;
+}
+
+/* ================================================
+   ALLIANCE SECTION
+   ================================================ */
+.alliance-section {
+    padding: 6rem 0;
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+    border-top: 1px solid rgba(14, 165, 233, 0.1);
+}
+
+.alliance-card {
+    background: white;
+    padding: 3.5rem 2rem;
+    border-radius: 32px;
+    box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.08);
+    border: 1px solid rgba(14, 165, 233, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.alliance-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 30px 60px -15px rgba(15, 23, 42, 0.12);
+}
+
+.alliance-logo {
+    max-width: 320px;
+    height: auto;
+    margin-bottom: 2.5rem;
+    filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.05));
+}
+
+.alliance-content h3 {
+    font-size: 2.25rem;
+    margin-bottom: 1.5rem;
+    color: var(--brand-accent);
+}
+
+.alliance-text {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    font-size: 1.15rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.alliance-text strong {
+    color: var(--brand-primary);
+}
